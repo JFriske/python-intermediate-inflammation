@@ -32,3 +32,8 @@ jobs:
     - name: Test with PyTest
       run: |
         python3 -m pytest --cov=inflammation.models tests/test_models.py
+
+    - name: Check code formatting with Ruff
+      run: |
+        python3 -m ruff check --exit-zero --output-format=github inflammation
+        
